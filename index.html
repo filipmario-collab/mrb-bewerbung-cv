@@ -129,6 +129,8 @@ textarea{min-height:76px;resize:vertical;}
 .pr input.bad{border-color:var(--err);}
 .dodnes{display:flex;align-items:center;gap:7px;font-size:13.5px;margin-top:7px;cursor:pointer;}
 .dodnes input{accent-color:var(--blue);width:17px;height:17px;margin:0;}
+.f>label.dodnes{display:flex;font-weight:400;margin-bottom:0;}
+.f>label.gd{display:flex;}
 .pr input[type=number]:disabled{background:#F4F7FA;color:#B6C1CC;}
 .gd{display:flex;gap:12px;align-items:flex-start;margin-bottom:18px;font-size:13.5px;color:#33465C;line-height:1.55;}
 .gd:last-child{margin-bottom:0;}
@@ -337,10 +339,11 @@ textarea{min-height:76px;resize:vertical;}
           <div class="errmsg" id="e-dost" data-t="e_dost"></div>
         </div>
         <div class="f">
-          <span class="lbl"><span data-t="f_cv"></span> <span class="om" data-t="opt"></span></span>
+          <span class="lbl" data-t="f_cv"></span>
           <div id="cvPole">
-            <input type="file" id="cv" name="Lebenslauf" accept=".pdf,.doc,.docx,.jpg,.jpeg" aria-label="Lebenslauf">
+            <input type="file" id="cv" name="Lebenslauf" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" aria-label="Lebenslauf">
             <p class="hint" data-t="cv_hint"></p>
+            <div class="errmsg" id="e-cv"></div>
           </div>
           <label class="gd" style="margin:12px 0 0;font-size:14px">
             <input type="checkbox" id="bezCV">
@@ -459,7 +462,10 @@ c_karta:["Haben Sie eine gültige Fahrerkarte / Code 95?","Máte platnú kartu v
 s7:["Verfügbarkeit und Lebenslauf","Dostupnosť a životopis","Dostupnost a životopis","Dostępność i CV","Availability and CV"],
 f_dost:["Ab wann können Sie anfangen","Odkedy môžem nastúpiť","Odkdy mohu nastoupit","Od kiedy mogę zacząć","When you can start"],
 f_cv:["Lebenslauf","Životopis","Životopis","CV","CV"],
-cv_hint:["PDF, Word oder JPG, max. 2 MB.","PDF, Word alebo JPG, max. 2 MB.","PDF, Word nebo JPG, max. 2 MB.","PDF, Word lub JPG, maks. 2 MB.","PDF, Word or JPG, max. 2 MB."],
+cv_hint:["PDF, Word oder Foto (JPG, PNG), max. 5 MB. Große Fotos werden automatisch verkleinert.","PDF, Word alebo fotka (JPG, PNG), max. 5 MB. Veľké fotky sa zmenšia automaticky.","PDF, Word nebo fotka (JPG, PNG), max. 5 MB. Velké fotky se zmenší automaticky.","PDF, Word lub zdjęcie (JPG, PNG), maks. 5 MB. Duże zdjęcia zmniejszą się automatycznie.","PDF, Word or photo (JPG, PNG), max. 5 MB. Large photos are reduced automatically."],
+e_cv:["Bitte Lebenslauf hochladen oder „Ich habe keinen Lebenslauf“ ankreuzen.","Nahrajte životopis alebo zaškrtnite „Nemám životopis“.","Nahrajte životopis nebo zaškrtněte „Nemám životopis“.","Prześlij CV lub zaznacz „Nie mam CV“.","Please upload your CV or tick “I have no CV”."],
+e_cv_typ:["Dieses Dateiformat geht nicht. Bitte PDF, Word, JPG oder PNG wählen.","Tento typ súboru nejde. Vyberte PDF, Word, JPG alebo PNG.","Tento typ souboru nejde. Vyberte PDF, Word, JPG nebo PNG.","Ten format pliku nie jest obsługiwany. Wybierz PDF, Word, JPG lub PNG.","This file type is not supported. Please choose PDF, Word, JPG or PNG."],
+e_cv_velke:["Die Datei ist zu groß (max. 5 MB). Bitte eine kleinere Datei wählen.","Súbor je príliš veľký (max. 5 MB). Vyberte menší súbor.","Soubor je příliš velký (max. 5 MB). Vyberte menší soubor.","Plik jest za duży (maks. 5 MB). Wybierz mniejszy plik.","The file is too large (max. 5 MB). Please choose a smaller file."],
 gdpr1:["Ich nehme zur Kenntnis, dass meine personenbezogenen Daten zur Prüfung dieser Bewerbung verarbeitet und an einen konkreten Arbeitgeber in der EU weitergegeben werden können. Details in den",
 "Beriem na vedomie, že moje osobné údaje budú spracované na účely posúdenia tejto žiadosti o prácu a môžu byť poskytnuté konkrétnemu zamestnávateľovi v rámci EÚ. Podrobnosti v",
 "Beru na vědomí, že mé osobní údaje budou zpracovány pro účely posouzení této žádosti o práci a mohou být poskytnuty konkrétnímu zaměstnavateli v rámci EU. Podrobnosti v",
@@ -483,7 +489,7 @@ done_p:["Vielen Dank. Wir melden uns telefonisch oder per E-Mail, in der Regel i
 "Thank you. We will contact you by phone or email, usually within two working days."],
 e_meno:["Bitte Vor- und Nachnamen angeben.","Uveďte prosím meno a priezvisko.","Uveďte prosím jméno a příjmení.","Podaj imię i nazwisko.","Please enter your full name."],
 e_tel:["Bitte Vorwahl wählen und Nummer ohne Vorwahl eingeben (7–12 Ziffern).","Vyberte predvoľbu a zadajte číslo bez predvoľby (7–12 číslic).","Vyberte předvolbu a zadejte číslo bez předvolby (7–12 číslic).","Wybierz kierunkowy i wpisz numer bez kierunkowego (7–12 cyfr).","Select the code and enter the number without it (7–12 digits)."],
-cv_velke:["Lebenslauf ist zu groß (max. 2 MB)","životopis je príliš veľký (max. 2 MB)","životopis je příliš velký (max. 2 MB)","CV jest za duże (maks. 2 MB)","CV is too large (max. 2 MB)"],
+cv_velke:["Lebenslauf ist zu groß (max. 5 MB)","životopis je príliš veľký (max. 5 MB)","životopis je příliš velký (max. 5 MB)","CV jest za duże (maks. 5 MB)","CV is too large (max. 5 MB)"],
 e_mail:["Bitte E-Mail-Format prüfen.","Skontrolujte prosím tvar e-mailovej adresy.","Zkontrolujte prosím tvar e-mailu.","Sprawdź poprawność adresu e-mail.","Please check the email format."],
 e_poz:["Bitte Position wählen.","Vyberte prosím pozíciu.","Vyberte prosím pozici.","Wybierz stanowisko.","Please select a position."],
 nenajdene:["Nichts gefunden. Wählen Sie die nächstpassende Position.","Nič nenájdené. Vyberte najbližšiu podobnú pozíciu.","Nic nenalezeno. Vyberte nejbližší podobnou pozici.","Nic nie znaleziono. Wybierz najbliższe stanowisko.","Nothing found. Pick the closest matching position."],
@@ -646,6 +652,13 @@ function prepni(code){
   if (lf) lf.value = code;
   [...$("langs").children].forEach(b => b.classList.toggle("on", b.dataset.l === code));
   vykresliVsetko();
+  // chybove hlasky sa skladaju v JS, treba ich prelozit zvlast
+  if (stavChyby === "valid") ukazValidaciu();
+  else if (stavChyby === "send") $("formErr").textContent = t(T.chyba_odoslania);
+  if ($("e-prace").classList.contains("on")) zlePrace();
+  if ($("e-cv").classList.contains("on")) zleCV();
+  const tl = $("frm").querySelector(".send");
+  if (tl.disabled) tl.textContent = t(T.odosielam);
 }
 
 /* ---------- vykreslenie ---------- */
@@ -976,7 +989,7 @@ cbIn.addEventListener("keydown", e => {
 });
 
 /* ---------- ukazovatel ---------- */
-const SLED = ["telNum","mail","dn","mesto","praxP","vzd","odbor","cv","kurzIne"];
+const SLED = ["telNum","mail","dn","mesto","praxP","vzd","odbor","kurzIne"];
 function prepocitaj(){
   let hot = 0, spolu = 0;
   SLED.forEach(id => { const el = $(id); if (!el) return; spolu++; if (el.value) hot++; });
@@ -984,7 +997,10 @@ function prepocitaj(){
   spolu++; if ($("meno").value) hot++;
   ["Geschlecht","dostRadio"].forEach(n => { spolu++; if (document.querySelector('input[name="'+n+'"]:checked')) hot++; });
   ["Zertifikate","Fuehrerschein"].forEach(n => { spolu++; if (document.querySelector('input[name="'+n+'"]:checked')) hot++; });
-  spolu++; if (document.querySelector('#odv input[type=checkbox]:checked')) hot++;
+  const bez = $("bezCV").checked;
+  // zivotopis: subor alebo "nemam zivotopis"; odvetvia su pri "nemam zivotopis" skryte
+  spolu++; if (bez || cvSubor) hot++;
+  if (!bez){ spolu++; if (document.querySelector('#odv input[type=checkbox]:checked')) hot++; }
   spolu++; if ([...document.querySelectorAll('#jaz .jz select:not(.jaz-nazov)')].some(s => s.value !== "Keine" && s.value !== "")) hot++;
   spolu++; if ($("s1").checked) hot++;
   $("progBar").style.width = Math.round(hot/spolu*100) + "%";
@@ -1010,8 +1026,70 @@ const zlyTel = () => {
   return n < p.min || n > p.max;
 };
 // Netlify CDN odmieta POST nad 8 MB bez odpovede — radsej zachytit tu
-const MAX_CV_BYTES = 2 * 1024 * 1024;
-const velkeCV = () => { const f = $("cv").files && $("cv").files[0]; return !!f && f.size > MAX_CV_BYTES; };
+const MAX_CV_BYTES = 5 * 1024 * 1024;
+const CV_PRIPONY = /\.(pdf|docx?|jpe?g|png)$/i;
+let cvSubor = null;            // subor, ktory sa naozaj odosle (fotka moze byt zmensena)
+let cvP = Promise.resolve();   // bezi, kym sa fotka zmensuje — odoslanie na to pocka
+let stavChyby = null;          // "valid" = zoznam chybajucich poli, "send" = zlyhalo odoslanie
+
+/* Fotka z mobilu ma bezne 3–6 MB a neprešla by limitom. Zmensi sa na
+   max. 2000 px a ulozi ako JPG — text na nej ostane citatelny. */
+function zmensiFotku(f, strana, kvalita){
+  return new Promise((ok, zle) => {
+    const url = URL.createObjectURL(f);
+    const img = new Image();
+    img.onload = () => {
+      try {
+        const k = Math.min(1, strana / Math.max(img.naturalWidth, img.naturalHeight));
+        const c = document.createElement("canvas");
+        c.width = Math.max(1, Math.round(img.naturalWidth * k));
+        c.height = Math.max(1, Math.round(img.naturalHeight * k));
+        const g = c.getContext("2d");
+        g.fillStyle = "#fff"; g.fillRect(0, 0, c.width, c.height);   // priehladne PNG -> biele pozadie
+        g.drawImage(img, 0, 0, c.width, c.height);
+        c.toBlob(b => {
+          URL.revokeObjectURL(url);
+          if (!b) return zle(new Error("toBlob"));
+          ok(new File([b], f.name.replace(/\.[^.]+$/, "") + ".jpg", {type: "image/jpeg"}));
+        }, "image/jpeg", kvalita);
+      } catch (e){ URL.revokeObjectURL(url); zle(e); }
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); zle(new Error("img")); };
+    img.src = url;
+  });
+}
+
+async function pripravCV(){
+  const f = ($("cv").files && $("cv").files[0]) || null;
+  let vysl = f;
+  if (f && /^image\/(jpeg|png)$/.test(f.type) && f.size > 700 * 1024){
+    try {
+      let m = await zmensiFotku(f, 2000, 0.82);
+      if (m.size > MAX_CV_BYTES) m = await zmensiFotku(f, 1500, 0.7);
+      if (m.size < f.size) vysl = m;
+    } catch (e){ console.warn("Zmensenie fotky zlyhalo, posiela sa original:", e); }
+  }
+  // medzitym mohol kandidat vybrat iny subor alebo zaskrtnut "nemam zivotopis"
+  if ((($("cv").files && $("cv").files[0]) || null) !== f) return;
+  cvSubor = vysl;
+  zleCV(true);
+  prepocitaj();
+}
+$("cv").addEventListener("change", () => { cvP = pripravCV(); });
+
+// lenSubor = kontrola hned po vybere suboru: chybajuci subor vtedy este nie je chyba
+function zleCV(lenSubor){
+  const box = $("e-cv");
+  let k = null;
+  if (!$("bezCV").checked){
+    if (!cvSubor) k = lenSubor ? null : "e_cv";
+    else if (!CV_PRIPONY.test(cvSubor.name)) k = "e_cv_typ";
+    else if (cvSubor.size > MAX_CV_BYTES) k = "e_cv_velke";
+  }
+  box.classList.toggle("on", !!k);
+  if (k) box.textContent = t(T[k]);
+  return k;
+}
 
 $("meno").addEventListener("blur", () => chybne($("meno"),"e-meno", () => !$("meno").value.trim()));
 $("telNum").addEventListener("blur",  () => chybne($("telNum"),"e-tel",  zlyTel));
@@ -1135,44 +1213,69 @@ function pripravKonsolidovanePolia(){
   $("detailsOut").value = riadky.join("\n");
 }
 
-$("frm").addEventListener("submit", e => {
-  e.preventDefault();
+function validuj(){
   const chyby = [];
   if (chybne($("meno"),"e-meno", () => !$("meno").value.trim())) chyby.push(t(T.f_meno));
   if (chybne($("telNum"),"e-tel", zlyTel))  chyby.push(t(T.f_tel));
   if (chybne($("mail"),"e-mail", zlyMail)) chyby.push(t(T.f_mail));
-  if (!$("poziciaVal").value){ $("e-poz").classList.add("on"); chyby.push(t(T.f_poz)); }
+  const bezPoz = !$("poziciaVal").value;
+  $("e-poz").classList.toggle("on", bezPoz);
+  if (bezPoz) chyby.push(t(T.f_poz));
   const dostZvolena = $("dost").querySelector("input:checked");
   const dostChyba = !dostZvolena || (dostZvolena.value === "Ab bestimmtem Datum" && !$("dostDatum").value);
   $("e-dost").classList.toggle("on", dostChyba);
   if (dostChyba) chyby.push(t(T.f_dost));
-  if (!$("s1").checked) chyby.push(t(T.err_suhlas));
-  if (velkeCV()) chyby.push(t(T.cv_velke));
+  if (zleCV()) chyby.push(t(T.f_cv));
   if (zlePrace()) chyby.push(t(T.prace_kr));
+  if (!$("s1").checked) chyby.push(t(T.err_suhlas));
+  return chyby;
+}
 
-  const box = $("formErr");
+function ukazValidaciu(){
+  const chyby = validuj(), box = $("formErr");
   if (chyby.length){
     box.textContent = t(T.doplnte) + chyby.join(", ") + ".";
     box.classList.add("on");
+    stavChyby = "valid";
+    return false;
+  }
+  box.classList.remove("on");
+  stavChyby = null;
+  return true;
+}
+
+$("frm").addEventListener("submit", async e => {
+  e.preventDefault();
+  const tlacidlo = $("frm").querySelector(".send");
+  const box = $("formErr");
+  if (tlacidlo.disabled) return;          // dvojite tuknutie
+  tlacidlo.disabled = true;
+  await cvP;                              // fotka sa este moze zmensovat
+  if (!ukazValidaciu()){
+    tlacidlo.disabled = false;
     const prve = document.querySelector(".bad, .errmsg.on");
     if (prve && prve.scrollIntoView) prve.scrollIntoView({block:"center"});
     return;
   }
-  box.classList.remove("on");
 
   pripravKonsolidovanePolia();
-
-  const tlacidlo = $("frm").querySelector(".send");
-  tlacidlo.disabled = true;
   tlacidlo.textContent = t(T.odosielam);
 
   let data = new FormData($("frm"));
   data.set("Formularsprache", L);
+  // posiela sa pripraveny subor (pripadne zmensena fotka), nie povodny z pola
+  data.delete("Lebenslauf");
+  if (cvSubor && !bezCV()) data.append("Lebenslauf", cvSubor, cvSubor.name);
   data = ocistiPrazdnePolia(data);
 
-  fetch("/", { method: "POST", body: data })
+  // na slabom signale by "Odosielam…" viselo donekonecna
+  const ctrl = new AbortController();
+  const casovac = setTimeout(() => ctrl.abort(), 90000);
+
+  fetch("/", { method: "POST", body: data, signal: ctrl.signal })
     .then(r => {
       if (!r.ok) throw new Error("HTTP " + r.status);
+      stavChyby = null;
       $("frm").style.display = "none";
       $("done").classList.add("on");
       window.scrollTo({top:0, behavior:"smooth"});
@@ -1183,7 +1286,9 @@ $("frm").addEventListener("submit", e => {
       tlacidlo.textContent = t(T.btn);
       box.textContent = t(T.chyba_odoslania);
       box.classList.add("on");
-    });
+      stavChyby = "send";
+    })
+    .finally(() => clearTimeout(casovac));
 });
 
 
@@ -1210,6 +1315,7 @@ e_roky:["Bitte Jahre prüfen: nicht in der Zukunft, „bis“ nicht vor „von�
 e_prace0:["Bitte mindestens eine Stelle eintragen oder „noch nirgends gearbeitet“ ankreuzen.","Vyplňte aspoň jednu prácu alebo zaškrtnite „Zatiaľ som nikde nepracoval“.","Vyplňte alespoň jednu práci nebo zaškrtněte „Zatím jsem nikde nepracoval“.","Wpisz co najmniej jedną pracę lub zaznacz „Jeszcze nigdzie nie pracowałem“.","Add at least one job or tick “I haven't worked anywhere yet”."]
 });
 const MAX_PRAC = 3;
+let pracN = 0;
 const bezCV = () => $("bezCV").checked;
 
 function cislujPrace(){
@@ -1226,16 +1332,17 @@ function pridajPracu(){
   if (document.querySelectorAll("#prace .pr").length >= MAX_PRAC) return;
   const r = document.createElement("div");
   r.className = "pr";
+  const u = "pr" + (++pracN);
   r.innerHTML =
     '<div class="pr-h"><span class="pr-n"></span><button type="button" class="xbtn">✕</button></div>' +
-    '<div class="f"><label data-t="p_firma"></label><input type="text" class="p-firma" data-tph="p_firma_ph"></div>' +
-    '<div class="f"><label data-t="p_poz"></label><input type="text" class="p-poz" data-tph="p_poz_ph"></div>' +
+    '<div class="f"><label for="'+u+'f" data-t="p_firma"></label><input type="text" id="'+u+'f" class="p-firma" maxlength="80" data-tph="p_firma_ph"></div>' +
+    '<div class="f"><label for="'+u+'p" data-t="p_poz"></label><input type="text" id="'+u+'p" class="p-poz" maxlength="80" data-tph="p_poz_ph"></div>' +
     '<div class="row2">' +
-      '<div class="f"><label data-t="p_od"></label><input type="number" class="p-od" inputmode="numeric" min="1960" placeholder="2019"></div>' +
-      '<div class="f"><label data-t="p_do"></label><input type="number" class="p-do" inputmode="numeric" min="1960" placeholder="2023">' +
+      '<div class="f"><label for="'+u+'o" data-t="p_od"></label><input type="number" id="'+u+'o" class="p-od" inputmode="numeric" min="1960" placeholder="2019"></div>' +
+      '<div class="f"><label for="'+u+'d" data-t="p_do"></label><input type="number" id="'+u+'d" class="p-do" inputmode="numeric" min="1960" placeholder="2023">' +
         '<label class="dodnes"><input type="checkbox" class="p-dodnes"><span data-t="p_dodnes"></span></label></div>' +
     '</div>' +
-    '<div class="f" style="margin-bottom:0"><label><span data-t="p_co"></span> <span class="om" data-t="opt"></span></label><textarea class="p-co" data-tph="p_co_ph"></textarea></div>';
+    '<div class="f" style="margin-bottom:0"><label for="'+u+'c"><span data-t="p_co"></span> <span class="om" data-t="opt"></span></label><textarea id="'+u+'c" class="p-co" maxlength="300" data-tph="p_co_ph"></textarea></div>';
   r.querySelectorAll("[data-t]").forEach(el => el.textContent = t(T[el.dataset.t]));
   r.querySelectorAll("[data-tph]").forEach(el => el.placeholder = t(T[el.dataset.tph]));
   const dodnes = r.querySelector(".p-dodnes"), doIn = r.querySelector(".p-do");
@@ -1250,7 +1357,8 @@ function obnovBezCV(){
   const on = bezCV();
   $("c-prace").classList.toggle("on", on);
   $("cvPole").style.display = on ? "none" : "";
-  if (on) $("cv").value = "";
+  if (on){ $("cv").value = ""; cvSubor = null; }
+  zleCV(true);
   // odvetvia s rokmi su pri vyplnenych zamestnaniach zbytocne
   $("sec3").style.display = on ? "none" : "";
   let n = 0;
@@ -1298,7 +1406,7 @@ function pridajPrace(riadky){
   riadky.push("Lebenslauf: keiner vorhanden — Angaben aus dem Formular");
   if ($("nikde").checked){ riadky.push("Berufserfahrung: bisher keine"); return; }
   const zoznam = [...document.querySelectorAll("#prace .pr")].map((r,i) => {
-    const g = c => r.querySelector(c).value.trim();
+    const g = c => r.querySelector(c).value.replace(/\s+/g, " ").trim();
     const bis = r.querySelector(".p-dodnes").checked ? "heute" : g(".p-do");
     const co = g(".p-co");
     return "  " + (i+1) + ". " + g(".p-poz") + " – " + g(".p-firma") + ", " + g(".p-od") + "–" + bis + (co ? ": " + co : "");
